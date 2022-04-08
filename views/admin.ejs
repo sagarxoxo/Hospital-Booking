@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('./partials/headAdmin.ejs') %>
+  <body class="bodyAdmin">
+    <nav class="navbar navbar-expand-lg">
+      <a class="navbar-brand" href="admin.html" title="Admin"></a>
+      <button
+        class="navbar-toggler navbar-toggler-right"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navb"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navb">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a
+              class="nav-link expand current"
+              title="Kasturie Naik"
+              href="index.html"
+              ><Doctor Admin Page></a
+            >
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-2">
+          <div class="sidebar" style="width: 320px">
+            <span>Doctor Admin Panel</span>
+            <div class="docProfileSection">
+              <img src="image/doc-1.jpg" alt="" class="docProfileImg" />
+              <p cllass="docname">Anjali Arora</p>
+            </div>
+
+            <div class="sidebarSection2">
+              <p class="toLeft">Main</p>
+              <ul class="list-group">
+                <li class="list-group-item active">
+                    <i class="fa fa-cubes"></i></i> Dashboard
+                </li>
+                <li class="list-group-item"><i class="fa fa-wheelchair"></i> Patient</li>
+                <li class="list-group-item"><i class="fa fa-id-badge"></i> List of Doctors</li>
+                <li class="list-group-item"><i class="fa fa-share-square-o"></i> Log Out</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-10">
+            <div class="mainBody">
+                <h2>Dashboard</h2>
+                <div class="row">
+                    <div class="col-md-3" >
+                        <div class="card">
+                        <div class="row">
+                        <div class="col-md-6">
+                            <div class="iconforsection1">
+                                <i class="fa fa-user" style="color: rgb(110,67,193);"></i>
+                            </div>
+                        </div>
+                        <div class="col-md-6 ">
+                            <div class="insideCard">
+                                <p id="p1">Total Paitient</p>
+                            <p id="p2">720</p></div>
+                            </div>
+                            
+                        
+                    </div></div></div>
+                    <div class="col-md-3" >
+                        <div class="card">
+                        <div class="row">
+                        <div class="col-md-6">
+                            <div class="iconforsection1">
+                                <i class="fa fa-street-view" style="color:#FD7E14;"></i>
+                            </div>
+                        </div>
+                        <div class="col-md-6 ">
+                            <div class="insideCard">
+                                <p id="p1">Appointment</p>
+                            <p id="p2">24</p></div>
+                            </div>
+                            
+                        
+                    </div></div></div>
+                    <div class="col-md-3" >
+                        <div class="card">
+                        <div class="row">
+                        <div class="col-md-6">
+                            <div class="iconforsection1">
+                                <i class="fa fa-user-plus" style="color:#198655;"></i>
+                            </div>
+                        </div>
+                        <div class="col-md-6 ">
+                            <div class="insideCard">
+                                <p id="p1">New Patient</p>
+                            <p id="p2">42</p></div>
+                            </div>
+                            
+                        
+                    </div></div></div>
+
+                    <div class="col-md-3" >
+                        <div class="card">
+                        <div class="row">
+                        <div class="col-md-6">
+                            <div class="iconforsection1">
+                                <i class="fa fa-code-fork" style="color:#0D6FFC;"></i>
+                            </div>
+                        </div>
+                        <div class="col-md-6 ">
+                            <div class="insideCard">
+                                <p id="p1">Doctors</p>
+                            <p id="p2">10</p></div>
+                        </div>
+                            
+                        
+                    </div></div></div>
+                </div>
+                <div class="row">
+                  <div class="col-md-9">
+                    <h4>Patient Details</h4>
+                    <table class="table align-middle mb-0 bg-white">
+                      <thead class="bg-light">
+                        <tr>
+                          <th>Patient Name</th>
+                          <th>Date</th>
+                          <th>Status</th>
+                          <th>Approve</th>
+                          <th>Decline</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                      
+                        <tr>
+                          <td>
+                            <div class="d-flex align-items-center">
+                              <img
+                                  src="https://mdbootstrap.com/img/new/avatars/8.jpg"
+                                  alt=""
+                                  style="width: 45px; height: 45px"
+                                  class="rounded-circle"
+                                  />
+                              <div class="ms-3">
+                                <p class="fw-bold mb-1">John Doe</p>
+                                <p class="text-muted mb-0">john.doe@gmail.com</p>
+                              </div>
+                            </div>
+                          </td>
+                          <td>
+                            <p class="fw-normal mb-1">Software engineer</p>
+                            
+                          </td>
+                          <td>
+                            <span class="badge badge-success rounded-pill d-inline">Active</span>
+                          </td>
+                          <td><i class="bi bi-check-square iconEditApproove"></i></i></td>
+                          <td>
+                            
+                              <i class="bi bi-backspace iconEdit">
+                            
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <div class="d-flex align-items-center">
+                              <img
+                                  src="https://mdbootstrap.com/img/new/avatars/6.jpg"
+                                  class="rounded-circle"
+                                  alt=""
+                                  style="width: 45px; height: 45px"
+                                  />
+                              <div class="ms-3">
+                                <p class="fw-bold mb-1">Alex Ray</p>
+                                <p class="text-muted mb-0">alex.ray@gmail.com</p>
+                              </div>
+                            </div>
+                          </td>
+                          <td>
+                            <p class="fw-normal mb-1">Consultant</p>
+                           
+                          </td>
+                          <td>
+                            <span class="badge badge-primary rounded-pill d-inline"
+                                  >Onboarding</span
+                              >
+                          </td>
+                          <td><i class="bi bi-check-square iconEditApproove"></i></i></td>
+                          <td>
+                            
+                              <i class="bi bi-backspace iconEdit">
+                            
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <div class="d-flex align-items-center">
+                              <img
+                                  src="https://mdbootstrap.com/img/new/avatars/7.jpg"
+                                  class="rounded-circle"
+                                  alt=""
+                                  style="width: 45px; height: 45px"
+                                  />
+                              <div class="ms-3">
+                                <p class="fw-bold mb-1">Kate Hunington</p>
+                                <p class="text-muted mb-0">kate.hunington@gmail.com</p>
+                              </div>
+                            </div>
+                          </td>
+                          <td>
+                            <p class="fw-normal mb-1">Designer</p>
+                          
+                          </td>
+                          <td>
+                            <span class="badge badge-warning rounded-pill d-inline">Awaiting</span>
+                          </td>
+                          <td><i class="bi bi-check-square iconEditApproove"></i></i></td>
+                          <td>
+                            
+                              <i class="bi bi-backspace iconEdit">
+                            
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+
+
+                  <div class="col-md-3">
+                    <h4>List of Doctors</h4>
+                    <table class="table align-middle mb-0 bg-white">
+                      <thead class="bg-light">
+                        <tr>
+                          <th>Name</th>
+                          <th>Status</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>
+                            <div class="d-flex align-items-center">
+                              <img
+                                  src="image/doc-1.jpg"
+                                  alt=""
+                                  style="width: 45px; height: 45px"
+                                  class="rounded-circle"
+                                  />
+                              <div class="ms-3">
+                                <p class="fw-bold mb-1">John Doe</p>
+                                <p class="text-muted mb-0">john.doe@gmail.com</p>
+                              </div>
+                            </div>
+                          </td>
+                          <td>
+                            <span class="badge badge-success rounded-pill d-inline">Active</span>
+                          </td>
+
+                        </tr>
+                        <tr>
+                          <td>
+                            <div class="d-flex align-items-center">
+                              <img
+                                  src="image/doc-2.jpg"
+                                  class="rounded-circle"
+                                  alt=""
+                                  style="width: 45px; height: 45px"
+                                  />
+                              <div class="ms-3">
+                                <p class="fw-bold mb-1">Alex Ray</p>
+                                <p class="text-muted mb-0">alex.ray@gmail.com</p>
+                              </div>
+                            </div>
+                          </td>
+                          
+                          <td>
+                            <span class="badge badge-primary rounded-pill d-inline"
+                                  >Onboarding</span
+                              >
+                          </td>
+                          
+                        </tr>
+                        <tr>
+                          <td>
+                            <div class="d-flex align-items-center">
+                              <img
+                                  src="image/doc-3.jpg"
+                                  class="rounded-circle"
+                                  alt=""
+                                  style="width: 45px; height: 45px"
+                                  />
+                              <div class="ms-3">
+                                <p class="fw-bold mb-1">Kate Hunington</p>
+                                <p class="text-muted mb-0">kate.hunington@gmail.com</p>
+                              </div>
+                            </div>
+                          </td>
+                          
+                          <td>
+                            <span class="badge badge-warning rounded-pill d-inline">Awaiting</span>
+                          </td>
+                          
+                         
+                        </tr>
+
+                        <tr>
+                          <td>
+                            <div class="d-flex align-items-center">
+                              <img
+                                  src="image/doc-4.jpg"
+                                  class="rounded-circle"
+                                  alt=""
+                                  style="width: 45px; height: 45px"
+                                  />
+                              <div class="ms-3">
+                                <p class="fw-bold mb-1">John Wick</p>
+                                <p class="text-muted mb-0">john@gmail.com</p>
+                              </div>
+                            </div>
+                          </td>
+                          
+                          <td>
+                            <span class="badge badge-warning rounded-pill d-inline">Awaiting</span>
+                          </td>
+                          
+                         
+                        </tr>
+                      </tbody>
+                    </table>
+
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

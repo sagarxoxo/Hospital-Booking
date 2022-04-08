@@ -1,0 +1,133 @@
+.bodyAdmin{
+    background-color: #F1F2FB;
+}
+.navbar{
+    background-color: #fff;
+    box-shadow: 3px 0 10px 0 rgb(183 192 206 / 20%);
+}
+
+.navbar-nav a{
+    color: white;
+}
+
+.sidebar{
+    background-color: #FFFEFE;
+    height: 100%;
+    width: auto;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    text-align: center;
+    box-shadow: 0 8px 10px 0 rgb(183 192 206 / 20%);
+    padding-top: 20px;
+    font-weight: 700;
+}
+
+.sidebar span{
+    color:#0153D2;
+}
+
+.col-md-3{
+    padding: 0px;
+}
+
+.docProfileSection{
+    margin-top: 40px;
+}
+.docProfileImg{
+    width: 30%;
+    border-radius: 50%;
+    border: 2px solid white;
+    box-shadow: 0 10px 16px 0 rgb(0 0 0 / 10%), 0 6px 20px 0 rgb(0 0 0 / 9%);
+}
+
+.docProfileSection p{
+    padding-top: 20px;
+}
+
+.sidebarSection2 .toLeft{
+    text-align: left;
+    padding-top: 40px;
+    padding-left: 20px;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.list-group-item{
+    margin: 20px 20px 0px 20px;
+    text-align: left;
+    border-radius: 20px;
+}
+
+.list-group-item:hover{
+    background-color: #0153D2;
+    color: white;
+    cursor: pointer;
+}
+
+.mainBody{
+    margin: 40px;
+}
+
+.card{
+    background: #fff;
+    min-height: 50px;
+    margin: 20px;
+    border: 1px solid #f2f4f9;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 0 rgb(183 192 206 / 20%);
+    -webkit-box-shadow: 0 0 10px 0 rgb(183 192 206 / 20%);
+}
+
+.insideCard{
+    text-align: right;
+    padding: 20px 20px 0 0;
+}
+
+.insideCard #p1{
+    font-size: 18px;
+    font-weight: 700;
+}
+.insideCard #p2{
+    font-size: 24px;
+    font-weight: 400;
+}
+
+
+
+.iconforsection1{
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    font-size: 50px;
+    margin: 20px 0px 0px 20px;
+}
+
+.table{
+
+    margin-top: 20px;
+    border-radius: 20px;
+}
+
+.iconEdit{
+    font-size: 24px;
+    color: red;
+    text-align: center;
+}
+
+.iconEditApproove{
+    font-size: 24px;
+    color: green;
+    text-align: center;
+}
+
+.iconEditApproove:hover{
+background-color: green;
+color: white;
+}
+
+.iconEdit:hover{
+    background-color: red;
+color: white;
+}
