@@ -136,6 +136,9 @@
                       </thead>
                       <tbody>
                       
+                        <% if(patients.length > 0){ %>
+
+                        <% patients.forEach(patient => { %>
                         <tr>
                           <td>
                             <div class="d-flex align-items-center">
@@ -146,13 +149,13 @@
                                   class="rounded-circle"
                                   />
                               <div class="ms-3">
-                                <p class="fw-bold mb-1">John Doe</p>
-                                <p class="text-muted mb-0">john.doe@gmail.com</p>
+                                <p class="fw-bold mb-1"><%= patient.name %></p>
+                                <p class="text-muted mb-0"><%= patient.email %></p>
                               </div>
                             </div>
                           </td>
                           <td>
-                            <p class="fw-normal mb-1">Software engineer</p>
+                            <p class="fw-normal mb-1"><%= patient.date %></p>
                             
                           </td>
                           <td>
@@ -165,66 +168,10 @@
                             
                           </td>
                         </tr>
-                        <tr>
-                          <td>
-                            <div class="d-flex align-items-center">
-                              <img
-                                  src="https://mdbootstrap.com/img/new/avatars/6.jpg"
-                                  class="rounded-circle"
-                                  alt=""
-                                  style="width: 45px; height: 45px"
-                                  />
-                              <div class="ms-3">
-                                <p class="fw-bold mb-1">Alex Ray</p>
-                                <p class="text-muted mb-0">alex.ray@gmail.com</p>
-                              </div>
-                            </div>
-                          </td>
-                          <td>
-                            <p class="fw-normal mb-1">Consultant</p>
-                           
-                          </td>
-                          <td>
-                            <span class="badge badge-primary rounded-pill d-inline"
-                                  >Onboarding</span
-                              >
-                          </td>
-                          <td><i class="bi bi-check-square iconEditApproove"></i></i></td>
-                          <td>
-                            
-                              <i class="bi bi-backspace iconEdit">
-                            
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>
-                            <div class="d-flex align-items-center">
-                              <img
-                                  src="https://mdbootstrap.com/img/new/avatars/7.jpg"
-                                  class="rounded-circle"
-                                  alt=""
-                                  style="width: 45px; height: 45px"
-                                  />
-                              <div class="ms-3">
-                                <p class="fw-bold mb-1">Kate Hunington</p>
-                                <p class="text-muted mb-0">kate.hunington@gmail.com</p>
-                              </div>
-                            </div>
-                          </td>
-                          <td>
-                            <p class="fw-normal mb-1">Designer</p>
-                          
-                          </td>
-                          <td>
-                            <span class="badge badge-warning rounded-pill d-inline">Awaiting</span>
-                          </td>
-                          <td><i class="bi bi-check-square iconEditApproove"></i></i></td>
-                          <td>
-                            
-                              <i class="bi bi-backspace iconEdit">
-                            
-                          </td>
-                        </tr>
+                        <% }) %>
+                        <% } else { %>
+                          <p>no DaTa</p>
+                      <% } %>
                       </tbody>
                     </table>
                   </div>

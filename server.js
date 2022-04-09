@@ -1,20 +1,45 @@
 const express = require('express');
+const { default: mongoose } = require('mongoose');
 const app = express();
+const Patient = require('./models/patient.js');
 
 
-app.listen(3000);
 
+const DB = "mongodb+srv://sagarxoxo:socool12305@cluster0.kbxlt.mongodb.net/patient?retryWrites=true&w=majority";
+mongoose.connect(DB, { useNewUrlParser: true, useUnifiedTopology: true })
+.then((result) => app.listen(3000))
+.catch((err) => console.log(err));
+              
 app.set('view engine', 'ejs');
-
 app.use(express.static("public"));
+app.use(express.urlencoded ({ extended: true }));
+
+
+
+
 
 app.get('/', (req,res) => {
  res.render('index');
 });
 
+//post data from database
+
 app.get('/admin', (req,res) => {
-    res.render('admin');
+   Patient.find()
+   .then((result) => {
+       res.render('admin', { patients: result})
+   })
    });
+
+//get data from html
+
+app.post('/', (req,res) =>{
+    const patient = new Patient(req.body);
+    patient.save();
+
+    res.redirect('/');
+})
+
 // const DB = "mongodb+srv://sagarxoxo:socool12305@cluster0.kbxlt.mongodb.net/patient?retryWrites=true&w=majority";
 // mongoose.connect(DB).then(() => {
    // console.log('Conncetion Sucefull');
