@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('./partials/headAdmin.ejs') %>
+  <body class="loginBody">
+    <div id="login">
+      <form>
+        <div class="container">
+          <label for="uname"><b>Username</b></label>
+          <input
+            type="text"
+            id="userName"
+            placeholder="Enter Username"
+            name="uname"
+            required
+          />
+
+          <label for="psw"><b>Password</b></label>
+          <input
+            type="password"
+            id="password"
+            placeholder="Enter Password"
+            name="password"
+            required
+          />
+
+          <button onClick="loginSuc()">Login</button>
+        </div>
+
+        <div class="container" style="background-color: #f1f1f1">
+          <button type="button" class="cancelbtn">Cancel</button>
+          <span class="psw">Forgot <a href="#">password?</a></span>
+        </div>
+      </form>
+    </div>
+
+    <script>
+      let uName = document.getElementById("userName");
+      let pass = document.getElementById("password");
+      let n1 = "akash";
+      let p1 = "123456";
+
+      function loginSuc() {
+        if (uName.value == "akash") {
+          window.location.href = "http://localhost:3000/admin";
+        } else {
+          window.location.href = "http://localhost:3000/admin";
+        }
+      }
+    </script>
+  </body>
+</html>

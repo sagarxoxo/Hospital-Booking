@@ -2,7 +2,8 @@
 <html lang="en">
   <%- include('./partials/headAdmin.ejs') %>
   <body class="bodyAdmin">
-    <nav class="navbar navbar-expand-lg">
+    
+    <nav class="navbar navbar-expand-lg" id="nav">
       <a class="navbar-brand" href="admin.html" title="Admin"></a>
       <button
         class="navbar-toggler navbar-toggler-right"
@@ -27,7 +28,7 @@
       </div>
     </nav>
 
-    <div class="container-fluid">
+    <div class="container-fluid" id="main">
       <div class="row">
         <div class="col-md-2">
           <div class="sidebar" style="width: 320px">
@@ -45,7 +46,7 @@
                 </li>
                 <li class="list-group-item"><i class="fa fa-wheelchair"></i> Patient</li>
                 <li class="list-group-item"><i class="fa fa-id-badge"></i> List of Doctors</li>
-                <li class="list-group-item"><i class="fa fa-share-square-o"></i> Log Out</li>
+                <li class="list-group-item"><i class="fa fa-share-square-o"></i> <a href="adminLogin" >Log Out</a></li>
               </ul>
             </div>
           </div>
@@ -129,9 +130,9 @@
                         <tr>
                           <th>Patient Name</th>
                           <th>Date</th>
-                          <th>Status</th>
+                          <th>Diseases</th>
                           <th>Approve</th>
-                          <th>Decline</th>
+                          <th>Delete</th>
                         </tr>
                       </thead>
                       <tbody>
@@ -139,15 +140,13 @@
                         <% if(patients.length > 0){ %>
 
                         <% patients.forEach(patient => { %>
-                        <tr>
+                        
+                           <tr>
+                            
                           <td>
+                            <a  href="/admin/<%= patient._id %>">hi</a>
                             <div class="d-flex align-items-center">
-                              <img
-                                  src="https://mdbootstrap.com/img/new/avatars/8.jpg"
-                                  alt=""
-                                  style="width: 45px; height: 45px"
-                                  class="rounded-circle"
-                                  />
+                              
                               <div class="ms-3">
                                 <p class="fw-bold mb-1"><%= patient.name %></p>
                                 <p class="text-muted mb-0"><%= patient.email %></p>
@@ -159,15 +158,17 @@
                             
                           </td>
                           <td>
-                            <span class="badge badge-success rounded-pill d-inline">Active</span>
+                            <span class="badge badge-success rounded-pill d-inline"><%= patient.diseases %></span>
                           </td>
-                          <td><i class="bi bi-check-square iconEditApproove"></i></i></td>
+                          <td><i class="bi bi-check-square iconEditApproove"></i></td>
                           <td>
                             
-                              <i class="bi bi-backspace iconEdit">
+                            <a onclick = "location.reload()" class="iconEdit" data-doc="<%= patient._id %>"  > <i class="bi bi-backspace iconEdit"> </i></a>
                             
                           </td>
+                        
                         </tr>
+                      
                         <% }) %>
                         <% } else { %>
                           <p>no DaTa</p>
@@ -285,5 +286,23 @@
         </div>
       </div>
     </div>
+
+    <script>
+
+const trashcan = document.querySelector(".iconEdit");
+
+trashcan.addEventListener('click', (e) => {
+const endpoint = `/admin/${trashcan.dataset.doc}`;
+fetch(endpoint, {
+  method: 'DELETE'
+})
+.then((response) => response.json())
+.then((data) => console.log(data))
+.catch(err => console.log(err));
+})
+
+ 
+
+    </script>
   </body>
 </html>
